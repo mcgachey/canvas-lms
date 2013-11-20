@@ -936,7 +936,7 @@ tinymce.create('tinymce.util.Dispatcher', {
 		toAbsolute : function(u, nh) {
 			u = new tinymce.util.URI(u, {base_uri : this});
 
-			return u.getURI(this.host == u.host && this.protocol == u.protocol ? nh : 0);
+			return u.getURI(this.host == u.host && this.protocol == u.protocol & this.port == u.port ? nh : 0);
 		},
 
 		toRelPath : function(base, path) {
